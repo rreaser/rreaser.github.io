@@ -89,6 +89,12 @@
     line-height: 1.6;
 }
 
+.paper-conferences {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.4rem;
+}
+
 .paper-links {
     display: flex;
     gap: 20px;
