@@ -181,14 +181,14 @@ strong {
     color: var(--primary-text);
 }
 
-/* Job market paper callout */
+/* Job market paper callout: label, title, then button, stacked so the
+   full title gets the whole width of the column under the photo */
 .jmp {
     grid-area: jmp;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 12px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px 18px;
     background: var(--highlight-bg);
     border: 1px solid var(--border-color);
     border-left: 3px solid var(--accent-color);
@@ -204,20 +204,31 @@ strong {
     text-transform: uppercase;
     color: var(--accent-color);
     line-height: 1.4;
+    margin-bottom: 6px;
 }
 
 .jmp-title {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.25;
     color: var(--primary-text);
 }
 
+.jmp-subtitle {
+    display: block;
+    margin-top: 3px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--secondary-text);
+    text-wrap: balance;
+}
+
 .jmp-button {
-    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin-top: 14px;
     font-family: 'Work Sans', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -367,13 +378,8 @@ strong {
         padding: 14px 18px;
     }
 
-    .jmp {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-    }
-
     .jmp-button {
+        align-self: stretch;
         justify-content: center;
     }
 }
